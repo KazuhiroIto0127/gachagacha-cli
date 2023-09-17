@@ -17,7 +17,7 @@ var startCmd = &cobra.Command{
 	Short: "Print random art.",
 	Run: func(cmd *cobra.Command, args []string) {
 		rarity := randomizer.GetRarity()
-		rbb, err := os.ReadFile("resources/rarities/" + rarity + ".txt")
+		rbb, err := os.ReadFile("resources/aa/rarities/" + rarity + ".txt")
 		if err != nil {
       fmt.Println(err)
     }
@@ -29,7 +29,7 @@ var startCmd = &cobra.Command{
 		}
 		fmt.Println(item.Name)
 
-		aa, err := os.ReadFile("resources/aa/" + item.Aa)
+		aa, err := os.ReadFile("resources/aa/items/" + item.Aa)
 		if err != nil {
       fmt.Println(err)
     }
