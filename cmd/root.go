@@ -1,22 +1,20 @@
 /*
 Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
 import (
 	"os"
 
+	"github.com/KazuhiroIto0127/gachagacha-cli/pkg/utils"
 	"github.com/spf13/cobra"
 )
-
-
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "gachagacha-cli",
-	Short: "gacha gacha application",
-	Long: `This is a CLI app made for study purposes. It's not useful at all. You can play a gacha game.`,
+	Short: "gacha gacha application.",
+	Long: utils.AaFromFile("title/gacha.txt") + "\n" + "The ASCII art being used is all reproduced from a site called `ascii art archive`.",
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },

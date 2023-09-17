@@ -1,12 +1,19 @@
 {
   "SSR": [
-    { "name": "cat", "aa": "cat.txt" }
+    { "name": "cat", "aa": "cat.txt" },
+    { "name": "elephant", "aa": "elephant.txt"},
+    { "name": "monkey", "aa": "monkey.txt"},
+    { "name": "dog", "aa": "dog.txt"}
   ],
   "SR": [
-    { "name": "dog", "aa": "dog.txt" }
+    { "name": "dog", "aa": "dog.txt" },
+    { "name": "bear", "aa": "bear.txt" },
+    { "name": "frog", "aa": "frog.txt" }
   ],
   "R":[
     { "name": "horse", "aa": "horse.txt" },
-    { "name": "book", "aa": "book.txt" }
+    { "name": "book", "aa": "book.txt" },
+    { "name": "fish", "aa": "fish.txt" },
+    { "name": "cat", "aa": "cat.txt" }
   ]
 }

@@ -3,8 +3,9 @@ package randomizer
 import (
 	"encoding/json"
 	"math/rand"
-	"os"
 	"time"
+
+	"github.com/KazuhiroIto0127/gachagacha-cli/resources"
 )
 
 type Rarity struct {
@@ -45,7 +46,7 @@ func GetRarity() string {
 }
 
 func GetRandomItem(rarity string) (Item, error) {
-	data, err := os.ReadFile("resources/items.json")
+	data, err := resources.Items.ReadFile("items.json")
 
 	if err != nil{
 		return Item{}, err

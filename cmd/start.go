@@ -5,23 +5,20 @@ package cmd
 
 import (
 	"fmt"
-	"os"
+	"strings"
 
 	"github.com/KazuhiroIto0127/gachagacha-cli/pkg/randomizer"
+	"github.com/KazuhiroIto0127/gachagacha-cli/pkg/utils"
 	"github.com/spf13/cobra"
 )
 
 // startCmd represents the start command
 var startCmd = &cobra.Command{
 	Use:   "start",
-	Short: "Print random art.",
+	Short: "This command allows you to pull the gacha. The rarity levels are SSR, SR, and R.",
 	Run: func(cmd *cobra.Command, args []string) {
 		rarity := randomizer.GetRarity()
-		rbb, err := os.ReadFile("resources/aa/rarities/" + rarity + ".txt")
-		if err != nil {
-      fmt.Println(err)
-    }
-		fmt.Print(string(rbb))
+		fmt.Println(utils.AaFromFile("rarities/" + rarity + ".txt"))
 
 		item, err := randomizer.GetRandomItem(rarity)
 		if err != nil {
@@ -29,11 +26,7 @@ var startCmd = &cobra.Command{
 		}
 		fmt.Println(item.Name)
 
-		aa, err := os.ReadFile("resources/aa/items/" + item.Aa)
-		if err != nil {
-      fmt.Println(err)
-    }
-		fmt.Print(string(aa))
+		fmt.Println(utils.AaFromFile("items/" + strings.ToLower(rarity) + "/" + item.Aa))
 	},
 }
 
