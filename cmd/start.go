@@ -5,6 +5,7 @@ package cmd
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/KazuhiroIto0127/gachagacha-cli/pkg/randomizer"
 	"github.com/spf13/cobra"
@@ -15,8 +16,24 @@ var startCmd = &cobra.Command{
 	Use:   "start",
 	Short: "Print random art.",
 	Run: func(cmd *cobra.Command, args []string) {
-		word := randomizer.GetRandomPhrase()
-		fmt.Println(word)
+		rarity := randomizer.GetRarity()
+		rbb, err := os.ReadFile("resources/rarities/" + rarity + ".txt")
+		if err != nil {
+      fmt.Println(err)
+    }
+		fmt.Print(string(rbb))
+
+		item, err := randomizer.GetRandomItem(rarity)
+		if err != nil {
+			fmt.Println(err)
+		}
+		fmt.Println(item.Name)
+
+		aa, err := os.ReadFile("resources/aa/" + item.Aa)
+		if err != nil {
+      fmt.Println(err)
+    }
+		fmt.Print(string(aa))
 	},
 }
 

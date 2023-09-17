@@ -1,0 +1,12 @@
+{
+  "SSR": [
+    { "name": "cat", "aa": "cat.txt" }
+  ],
+  "SR": [
+    { "name": "dog", "aa": "dog.txt" }
+  ],
+  "R":[
+    { "name": "horse", "aa": "horse.txt" },
+    { "name": "book", "aa": "book.txt" }
+  ]
+}
