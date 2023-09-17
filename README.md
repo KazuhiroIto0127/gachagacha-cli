@@ -8,6 +8,12 @@ brewでinstall
 brew install KazuhiroIto0127/tap/gachagacha-cli
 ```
 
+ガチャが引けるコマンドは下記
+
+```
+gachagacha-cli start
+```
+
 ### Thanks
 
 asciiartは下記を利用しています。
