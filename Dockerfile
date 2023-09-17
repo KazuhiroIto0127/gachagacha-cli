@@ -10,3 +10,4 @@ RUN apk add --no-cache build-base make
 
 RUN go install github.com/ramya-rao-a/go-outline@latest
 RUN go install golang.org/x/tools/gopls@latest
+RUN go install github.com/spf13/cobra-cli@latest
